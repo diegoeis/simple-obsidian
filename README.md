@@ -1,4 +1,4 @@
-![](https://i.imgur.com/9e9GwBy.png)
+![](https://i.imgur.com/e7XSVZz.png)
 
 The Simple is a theme for Obsidian that prioritizes reading and writing. 
 
