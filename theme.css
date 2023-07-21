@@ -182,7 +182,6 @@ body.eis-sidebar-dark:not(body.theme-dark) {
   --ribbon-bg: #262626;
   --text-icon-color: #bababa;
   --nav-item: #bababa;
-  /* --text-muted: var(--text-icon-color); */
 }
 
 body.eis-sidebar-dark:not(body.theme-dark) .setting-item-description {color: var(--color-base-70)}
@@ -208,8 +207,13 @@ body.eis-sidebar-dark:not(body.theme-dark):not(.is-grabbing) .tree-item-self.is-
 
 body.eis-sidebar-dark:not(body.theme-dark) .mod-left-split .workspace-tabs .workspace-leaf .nav-file-title, 
 body.eis-sidebar-dark:not(body.theme-dark) .mod-left-split .workspace-tabs .workspace-leaf .nav-folder-title,
+body.eis-sidebar-dark:not(body.theme-dark) .mod-top-left-space .tree-item .tree-item-icon,
+body.eis-sidebar-dark:not(body.theme-dark) .mod-top-left-space .tree-item-inner-text,
+body.eis-sidebar-dark:not(body.theme-dark) .mod-top-left-space .search-result-file-title,
 body.eis-sidebar-dark:not(body.theme-dark) .side-dock-settings .clickable-icon,
-body.eis-sidebar-dark:not(body.theme-dark) .side-dock-actions .clickable-icon {
+body.eis-sidebar-dark:not(body.theme-dark) .side-dock-actions .clickable-icon,
+body.eis-sidebar-dark:not(body.theme-dark) .workspace-tab-header-inner svg,
+body.eis-sidebar-dark:not(body.theme-dark) .clickable-icon {
   color: var(--nav-item)
 }
 
