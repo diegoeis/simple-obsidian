@@ -7,16 +7,21 @@ Readme:
 https://github.com/diegoeis/simple-obsidian
 ────────────────────────────────────────────────────── */
 
-
+    /* -
+        id: eis-vintage-color
+        title: Vintage Theme
+        description: If enable, you will have a beauty vintage neutral style
+        type: class-toggle
+        default: true */
 /* @settings
 
 name: Simple visual control settings
 id: custom-diegoeis-simple
 settings:
     - 
-      id: Sidebar
-      title: Sidebar appearance
-      description: Where you config the appearance and other options about the file sidebar
+      id: appearance
+      title: General appearance
+      description: Where you config the interface appearance and other general options
       type: heading
       level: 1
     -
@@ -24,7 +29,7 @@ settings:
         title: Dark sidebar
         description: If enable, the sidebar will be dark, even in light mode.
         type: class-toggle
-        default: true
+        default: false
     -
       id: Headings
       title: Fonts and Typograph of Titles
@@ -174,9 +179,10 @@ body.theme-dark {
 /* ─────────────────────────────────────────────────── */
 
 body.eis-sidebar-dark:not(body.theme-dark) {
-  --ribbon-background: #262626;
-  --icon-color: #bababa;
-  --text-muted: var(--icon-color);
+  --ribbon-bg: #262626;
+  --text-icon-color: #bababa;
+  --nav-item: #bababa;
+  /* --text-muted: var(--text-icon-color); */
 }
 
 body.eis-sidebar-dark:not(body.theme-dark) .setting-item-description {color: var(--color-base-70)}
@@ -184,16 +190,13 @@ body.eis-sidebar-dark:not(body.theme-dark) .setting-item-description {color: var
 body.eis-sidebar-dark:not(body.theme-dark).is-focused .workspace-tab-header .workspace-tab-header-inner .workspace-tab-header-inner-title {
   color: rgba(0, 0, 0, .5);
 }
+
 body.eis-sidebar-dark:not(body.theme-dark) .workspace .mod-root .workspace-tab-header-inner::after {background-color: var(--color-base-30);}
 
-body.eis-sidebar-dark:not(body.theme-dark) .nav-folder.mod-root > .nav-folder-title {color: var(--icon-color)}
+body.eis-sidebar-dark:not(body.theme-dark) .nav-folder.mod-root > .nav-folder-title {color: var(--text-icon-color)}
 
 body.eis-sidebar-dark:not(body.theme-dark).is-focused .workspace-tab-header.is-active .workspace-tab-header-inner .workspace-tab-header-inner-title {color: #000;}
 
-body.eis-sidebar-dark:not(body.theme-dark) .workspace-ribbon, 
-body.eis-sidebar-dark:not(body.theme-dark).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container,
-body.eis-sidebar-dark:not(body.theme-dark) .workspace-ribbon.mod-left:before,
-body.eis-sidebar-dark:not(body.theme-dark) .workspace-ribbon.side-dock-ribbon.is-collapsed {border-color: #323232;}
 
 body.eis-sidebar-dark:not(body.theme-dark) .nav-file-title.is-active,
 body.eis-sidebar-dark:not(body.theme-dark) .mod-left-split .workspace-tab-header.is-active,
@@ -201,6 +204,13 @@ body.eis-sidebar-dark:not(body.theme-dark) .is-active .workspace-tab-header-inne
 body.eis-sidebar-dark:not(body.theme-dark):not(.is-grabbing) .tree-item-self.is-clickable:hover {
   color: #bababa;
   background-color: rgba(255,255,255, 0.075);
+} 
+
+body.eis-sidebar-dark:not(body.theme-dark) .mod-left-split .workspace-tabs .workspace-leaf .nav-file-title, 
+body.eis-sidebar-dark:not(body.theme-dark) .mod-left-split .workspace-tabs .workspace-leaf .nav-folder-title,
+body.eis-sidebar-dark:not(body.theme-dark) .side-dock-settings .clickable-icon,
+body.eis-sidebar-dark:not(body.theme-dark) .side-dock-actions .clickable-icon {
+  color: var(--nav-item)
 }
 
 body.eis-sidebar-dark:not(body.theme-dark) .nav-folder.mod-root .nav-folder > .nav-folder-children {
@@ -211,23 +221,33 @@ body.eis-sidebar-dark:not(body.theme-dark) .workspace-tab-header-container,
 .is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container:before {
 }
 
-body.eis-sidebar-dark:not(body.theme-dark) .workspace-tabs .workspace-leaf,
-body.eis-sidebar-dark:not(body.theme-dark) .workspace-ribbon.side-dock-ribbon.is-collapsed,
-body.eis-sidebar-dark:not(body.theme-dark).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container,
-body.eis-sidebar-dark:not(body.theme-dark) .workspace-ribbon.mod-left:before {
-  background-color: var(--ribbon-background);
-}
-
-/** when sidebar is not collapsed **/
-body.eis-sidebar-dark:not(body.theme-dark).is-hidden-frameless:not(.is-fullscreen) .is-sidedock-collapsed .workspace-tabs.mod-top-left-space .workspace-tab-header-container,
-body.eis-sidebar-dark:not(body.theme-dark) .workspace-ribbon.mod-left.is-collapsed:before {
-  background-color: var(--tab-container-background);
+body.eis-sidebar-dark:not(body.theme-dark) .is-left-sidedock-open .workspace-split.mod-horizontal.mod-left-split .workspace-tab-header-container,
+body.eis-sidebar-dark:not(body.theme-dark) .is-left-sidedock-open .workspace-ribbon.side-dock-ribbon.mod-left,
+body.eis-sidebar-dark:not(body.theme-dark) .is-left-sidedock-open .workspace-ribbon.mod-left:not(.is-collapsed):before,
+body.eis-sidebar-dark:not(body.theme-dark) .is-left-sidedock-open .mod-left-split .workspace-tabs .workspace-leaf {
+  background-color: var(--ribbon-bg);
+  border-color: rgba(255, 255, 255, 0.1);
   transition: all linear .1s;
 }
+body.eis-sidebar-dark:not(body.theme-dark) .workspace-ribbon.mod-left.is-collapsed {transition: none;}
 
 body.eis-sidebar-dark:not(body.theme-dark).is-hidden-frameless:not(.is-popout-window) .workspace .workspace-tabs.mod-top-right-space .workspace-tab-header-container {
   background-color: var(--tab-container-background);
   border-bottom-color: var(--divider-color)
+}
+
+/* ─────────────────────────────────────────────────── */
+/* When Vintage option is enable
+/* ─────────────────────────────────────────────────── */
+body.eis-vintage-color:not(body.theme-dark) {
+  --background-primary: #FEFCF1;
+}
+
+body.eis-vintage-color:not(body.theme-dark) .workspace-tabs .workspace-leaf,
+body.eis-vintage-color:not(body.theme-dark) .workspace-ribbon.side-dock-ribbon.is-collapsed,
+body.eis-vintage-color:not(body.theme-dark).is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container,
+body.eis-vintage-color:not(body.theme-dark) .workspace-ribbon.mod-left:before {
+  background-color: var(--background-primary);
 }
 
 /* ─────────────────────────────────────────────────── */
@@ -239,6 +259,7 @@ body.eis-sidebar-dark:not(body.theme-dark).is-hidden-frameless:not(.is-popout-wi
 ***/
 .horizontal-tab-nav-item, .vertical-tab-nav-item {
   font-size: var(--font-ui-small);
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -254,7 +275,6 @@ body.eis-sidebar-dark:not(body.theme-dark).is-hidden-frameless:not(.is-popout-wi
 .modal {
   border: none;
 }
-
 
 /***
   SETTINGS CONTENT
@@ -349,7 +369,7 @@ body.eis-sidebar-dark:not(body.theme-dark) [data-path="/"].tree-item-self.nav-fo
   cursor: pointer;
 }
 
-.tree-item.nav-folder {font-weight: bold;}
+.tree-item.nav-folder {font-weight: 600;}
 .tree-item.nav-file {font-weight: 400;}
 
 .nav-folder.mod-root .nav-folder > .nav-folder-children {
