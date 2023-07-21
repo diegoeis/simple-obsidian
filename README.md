@@ -49,6 +49,10 @@ Great readability for both reading and writing, designed for everyone who loves 
 
 ![Inter font](https://i.imgur.com/Leu8bmI.png)
 
+You can choose between *Inter*, *IBM Plex* and *iA Writer Quattro* fonts.
+
+![Three beauty fonts to write and read](https://i.imgur.com/3q3PrO8.jpg)
+
 
 ## Style Settings
 
@@ -96,6 +100,10 @@ _These are the same checkbox styles used in [Things](https://github.com/colineck
 
 ## Next steps
 
-- improve export version
-- improve preview version
-- insert options to customize font family
+**21/07/2023**
+- [x] improve export version - 21/07/2023
+- [x] improve preview version - 21/07/2023
+- [x] insert options to customize font family - 21/07/2023
+
+**Next, later**
+
