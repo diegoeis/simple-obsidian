@@ -174,9 +174,6 @@ body.theme-dark {
   --color-base-23: #323232;
 }
 
-body.theme-dark .cm-strong {color: white;}
-
-
 /* ─────────────────────────────────────────────────── */
 /* SIDEBAR DARK ENABLE
 /* ─────────────────────────────────────────────────── */
@@ -446,6 +443,12 @@ body.eis-sidebar-dark:not(body.theme-dark) [data-path="/"].tree-item-self.nav-fo
 
 .is-focused .workspace-leaf.mod-active .view-header-title {
   color: var(--color-base-60);
+}
+
+body.theme-dark .cm-strong {color: white;}
+
+body.theme-dark .cm-contentContainer .cm-content .cm-line {
+  color: var(--color-base-70)
 }
 
 /** LINK **/
