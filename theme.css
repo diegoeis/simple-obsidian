@@ -165,6 +165,9 @@ body {
 
   --default-border-radius: 3px;
 
+  --hr-thickness: 1px;
+
+
 
   /***
     MODAL
@@ -209,6 +212,11 @@ body {
 
   --font-paragraph: .95rem;
   --frontmatter-font-size: .65rem;
+
+  /** Metadata Properties **/
+
+  --metadata-label-font-size: .8rem;
+  --metadata-input-font-size: var(--metadata-label-font-size);
 
   /***
     LISTS
@@ -556,6 +564,11 @@ body.theme-dark .cm-contentContainer .cm-content .cm-line {
   color: var(--color-base-70)
 }
 
+.hr.cm-line hr {
+  background: none;
+  outline: none;
+}
+
 /** LINK **/
 .cm-s-obsidian span.cm-link:hover .cm-underline,
 .cm-link:hover .cm-underline,
@@ -594,6 +607,16 @@ body.theme-dark .cm-contentContainer .cm-content .cm-line {
   margin: 30px 0;
 }
 
+.cm-line.HyperMD-quote {
+  padding: 10px 0 !important;
+}
+
+.callout-content br {
+  outline: 1px solid red;
+  display: block;
+  padding: 10px;
+}
+
 /***
   CODE BLOCK
 ***/
@@ -608,7 +631,7 @@ body.theme-dark .cm-contentContainer .cm-content .cm-line {
 
 
 /* ─────────────────────────────────────────────────── */
-/* FRONTMATTER
+/* FRONTMATTER & PROPERTIES 
 /* ─────────────────────────────────────────────────── */
 
 .cm-hmd-frontmatter,
@@ -623,8 +646,40 @@ body.theme-dark .cm-contentContainer .cm-content .cm-line {
 body.eis-sidebar-dark .cm-hmd-frontmatter.cm-string {color: var(--color-base-60)}
 
 /*** FRONTMATTER RENDERED ***/
+.metadata-properties-title {
+  font-size: var(--font-smallest)
+}
+.metadata-properties-heading.is-collapsed .metadata-properties-title {
+  color: var(--color-base-60)
+}
+
 .frontmatter-container .frontmatter-section {align-items: flex-start;}
 
+.metadata-property-icon svg.svg-icon {
+  height: 15px;
+  width: 15px;
+}
+
+.metadata-properties-heading {cursor: pointer;}
+
+.collapse-indicator.collapse-icon:before  {
+  display: none;
+}
+
+.collapse-indicator.collapse-icon svg {
+  width: 9px;
+  position: relative;
+  top: 4px;
+  left: 5px;
+}
+
+.metadata-add-button.text-icon-button {
+  cursor: pointer;
+  border: 1px solid var(--color-base-25);
+  border-radius: 3px;
+}
+
+.metadata-property-key-input {cursor: pointer;}
 
 /* ─────────────────────────────────────────────────── */
 /* TABS
@@ -633,6 +688,21 @@ body.eis-sidebar-dark .cm-hmd-frontmatter.cm-string {color: var(--color-base-60)
 
 
 
+/* ─────────────────────────────────────────────────── */
+/* DATAVIEW
+/* ─────────────────────────────────────────────────── */
+
+.table-view-table {
+  font-size: .85rem;
+}
+
+.table-view-tbody tr {
+  border-bottom: 1px solid var(--color-base-25);
+}
+
+.table-view-table > tbody > tr > td {padding: 7px;}
+
+.table-view-tr-header .table-view-th {font-weight: 600; font-size: .8rem;}
 
 /* ------------------- */
 /* Checkbox styling & icons. Credit Minimal theme: https://minimal.guide/Block+types/Checklists#Checkbox+styling */

@@ -47,11 +47,11 @@ You can enable and disable the sidebar dark version in Style Settings:
 
 Great readability for both reading and writing, designed for everyone who loves to write and take notes on their most important subjects.
 
-![Inter font](https://i.imgur.com/Leu8bmI.png)
-
 You can choose between *Inter*, *IBM Plex* and *iA Writer Quattro* fonts.
 
 ![Three beauty fonts to write and read](https://i.imgur.com/3q3PrO8.jpg)
+
+![Inter font](https://i.imgur.com/Leu8bmI.png)
 
 
 ## Style Settings
