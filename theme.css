@@ -237,6 +237,7 @@ body.eis-font-ibm {
 
 body.eis-font-iawriter-quattro {
   --font-default: var(--font-family-iawriter-quattro);
+  letter-spacing: -0.03rem;
 }
 
 body.theme-light {
@@ -530,7 +531,6 @@ body.eis-sidebar-dark:not(body.theme-dark) [data-path="/"].tree-item-self.nav-fo
 .HyperMD-header-5:hover:before {content: "H5";}
 .HyperMD-header-6:hover:before {content: "H6";}
 
-
 /***
   PARAGRAPHS 
 ***/
@@ -609,6 +609,7 @@ body.theme-dark .cm-contentContainer .cm-content .cm-line {
 
 .cm-line.HyperMD-quote {
   padding: 10px 0 !important;
+  text-indent: -15px !important;
 }
 
 .callout-content br {
@@ -633,6 +634,16 @@ body.theme-dark .cm-contentContainer .cm-content .cm-line {
 /* ─────────────────────────────────────────────────── */
 /* FRONTMATTER & PROPERTIES 
 /* ─────────────────────────────────────────────────── */
+.metadata-properties-heading .collapse-indicator {
+  top: 1px;
+  left: -15px;
+}
+
+.collapse-icon svg.svg-icon {
+  width: 8px;
+  height: 8px;
+}
+
 
 .cm-hmd-frontmatter,
 .frontmatter-section .frontmatter-section-label,
@@ -662,7 +673,7 @@ body.eis-sidebar-dark .cm-hmd-frontmatter.cm-string {color: var(--color-base-60)
 
 .metadata-properties-heading {cursor: pointer;}
 
-.collapse-indicator.collapse-icon:before  {
+/* .collapse-indicator.collapse-icon:before  {
   display: none;
 }
 
@@ -671,7 +682,7 @@ body.eis-sidebar-dark .cm-hmd-frontmatter.cm-string {color: var(--color-base-60)
   position: relative;
   top: 4px;
   left: 5px;
-}
+} */
 
 .metadata-add-button.text-icon-button {
   cursor: pointer;
@@ -703,6 +714,21 @@ body.eis-sidebar-dark .cm-hmd-frontmatter.cm-string {color: var(--color-base-60)
 .table-view-table > tbody > tr > td {padding: 7px;}
 
 .table-view-tr-header .table-view-th {font-weight: 600; font-size: .8rem;}
+
+
+/* h1.tasks-group-heading
+h2.tasks-group-heading
+h3.tasks-group-heading */
+.block-language-tasks p {margin: 0; padding: 0;}
+
+.block-language-tasks h1.tasks-group-heading p {font-size: 2rem;}
+.block-language-tasks h2.tasks-group-heading p {font-size: 1.8rem;}
+.block-language-tasks h3.tasks-group-heading p {font-size: 1.6rem;}
+.block-language-tasks h4.tasks-group-heading p {font-size: 1.25rem;}
+.block-language-tasks h5.tasks-group-heading p {font-size: 1rem;}
+.block-language-tasks h6.tasks-group-heading p {font-size: .85rem;}
+
+.block-language-tasks .contains-task-list.plugin-tasks-query-result {}
 
 /* ------------------- */
 /* Checkbox styling & icons. Credit Minimal theme: https://minimal.guide/Block+types/Checklists#Checkbox+styling */
