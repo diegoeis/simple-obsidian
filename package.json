@@ -1,6 +1,6 @@
 {
     "name": "Simple",
-    "version": "1.0.7",
+    "version": "1.0.8",
 	"scripts": {
 		"version": "node version-bump.mjs && git add manifest.json versions.json"
 	}
