@@ -539,9 +539,10 @@ body.eis-sidebar-dark:not(body.theme-dark) [data-path="/"].tree-item-self.nav-fo
 .cm-contentContainer .cm-content .HyperMD-header.HyperMD-header-6.cm-line:hover:before {
   --title-height-title-id: 12px;
   position: absolute;
-  top: calc(var(--title-height-title-id)/1.5);
+  bottom: 5px;
   right: 0;
-  top: 50%;
+  z-index: -1;
+  user-select: none;
   transform: translateY(-50%);
   height: var(--title-height-title-id);
   opacity: .3;
