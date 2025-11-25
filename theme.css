@@ -37,12 +37,6 @@ settings:
         default: true
         type: class-toggle
     -
-        id: enable-focus-mode
-        title: Enable Focus Mode
-        description: When enabled, tabs will be hidden by default and will appear when you hover over their area.
-        default: false
-        type: class-toggle
-    -
       id: eis-font-family
       title: Font size of headings and paragraphs
       type: heading
@@ -745,13 +739,16 @@ body.eis-sidebar-dark .cm-hmd-frontmatter.cm-string {color: var(--color-base-60)
 /* ─────────────────────────────────────────────────── */
 /* Foscus Mode
 /* ─────────────────────────────────────────────────── */
-
-.enable-focus-mode .mod-root .workspace-tab-header-container {
+/*
+.mod-top-right-space .workspace-tab-header-container:hover {
   background: transparent;
+  width: 100% !important;
+  border: 1px solid red;
   border-bottom-color: transparent;
 }
 
-.enable-focus-mode .mod-root .workspace-tab-header-container::before {
+ .mod-root .workspace-tab-header-container .workspace-tab-header-container-inner {width: 100%;}
+.mod-root .workspace-tab-header-container::before {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -760,19 +757,20 @@ body.eis-sidebar-dark .cm-hmd-frontmatter.cm-string {color: var(--color-base-60)
   background: rgba(0, 0, 0, 0.1);
   width: 70%;
   height: 5px;
+  z-index: -1;
   border-radius: 10px;
-}
+} 
+.theme-dark .mod-root .workspace-tab-header-container::before {background: rgba(255, 255, 255, 0.05);}
 
-.enable-focus-mode .theme-dark .mod-root .workspace-tab-header-container::before {background: rgba(255, 255, 255, 0.05);}
-
-.enable-focus-mode .mod-root .workspace-tab-header-container:hover::before {display: none;}
-.enable-focus-mode .mod-root .workspace-tab-header-container:hover * {opacity: 1;}
-.enable-focus-mode .mod-root .workspace-tab-header-container:hover {
+.mod-root .workspace-tab-header-container:hover::before {display: none;}
+.mod-root .workspace-tab-header-container:hover .workspace-tab-header-container-inner * {opacity: 1;}
+.mod-root .workspace-tab-header-container .workspace-tab-header-container-inner:hover {
   background: var(--tab-container-background);
+  border: 1px solid red;
   border-bottom-color: var(--tab-outline-color);
 }
 
-.enable-focus-mode .mod-root .workspace-tab-header-container * {opacity: 0;}
+.mod-root .workspace-tab-header-container .workspace-tab-header-container-inner * {opacity: 0;} */
 
 
 /* ─────────────────────────────────────────────────── */
