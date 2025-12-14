@@ -60,6 +60,17 @@ We will always be adding new customization options, but we will always prioritiz
 
 Here are the steps to install it in your Obsidian](https://obsidian.md/plugins?id=obsidian-style-settings).
 
+### Editor layout order
+
+Use the **Define the order of elements in content space** setting group to rearrange the vertical order of core elements inside the editor:
+
+- **Properties metadata (YAML)** – default order `1`
+- **Inline Title (filename)** – default order `2`
+- **Content** – default order `3`
+- **Embedded backlinks** – default order `4`
+
+Each control accepts numeric values. Lower numbers appear first, so you can quickly move the inline title below the properties panel when Obsidian's inline titles are enabled, keeping metadata visible before the note body.
+
 ## Checklists styles
 Simple supports a wide number of alternate checkbox types. These allow you to call out tasks that are incomplete, canceled, rescheduled, etc. See below for availale checkbox types.
 
