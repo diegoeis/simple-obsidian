@@ -340,7 +340,6 @@ body.eis-sidebar-dark:not(body.theme-dark) .is-left-sidedock-open .workspace-rib
 body.eis-sidebar-dark:not(body.theme-dark) .is-left-sidedock-open .workspace-ribbon.mod-left:not(.is-collapsed):before,
 body.eis-sidebar-dark:not(body.theme-dark) .is-left-sidedock-open .mod-left-split .workspace-tabs .workspace-leaf {
   background-color: var(--ribbon-bg);
-  border-color: rgba(255, 255, 255, 0.1);
   transition: all linear .1s;
 }
 body.eis-sidebar-dark:not(body.theme-dark) .workspace-ribbon.mod-left.is-collapsed {transition: none;}
@@ -350,19 +349,18 @@ body.eis-sidebar-dark:not(body.theme-dark).is-hidden-frameless:not(.is-popout-wi
   border-bottom-color: var(--divider-color)
 }
 
+body.eis-sidebar-dark:not(body.theme-dark) .is-left-sidedock-open .workspace-split.mod-horizontal.mod-left-split .workspace-tab-header-container,
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
+body.eis-sidebar-dark:not(body.theme-dark) .is-left-sidedock-open .workspace-ribbon.side-dock-ribbon.mod-left,
+body.eis-sidebar-dark:not(body.theme-dark) .is-left-sidedock-open .workspace-ribbon.mod-left:not(.is-collapsed):before,
+body.eis-sidebar-dark:not(body.theme-dark) .is-left-sidedock-open .mod-left-split .workspace-tabs .workspace-leaf,
+body.eis-sidebar-dark .tree-item-children {
+  border-color: rgba(255, 255, 255, .15);
+}
+
 /** SCROLL BARS **/
-.nav-files-container ::-webkit-scrollbar {
-  width: 9px;
-}
-
-.nav-files-container ::-webkit-scrollbar-track {
-  background: var(--scrollbar-background);
-}
-
-.nav-files-container ::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-color);
-  border-radius: 0;
-  border: 0px;
+.nav-files-container {
+  scrollbar-color: #999 transparent;
 }
 
 
